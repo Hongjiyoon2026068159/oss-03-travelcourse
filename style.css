@@ -1,0 +1,98 @@
+/* 1. 팀 공통 컬러 변수 (대표 색상 4가지) */
+:root {
+  --color-bg-main: #0f172a;      /* 1) 메인 배경: 차분한 밤하늘 딥 네이비 */
+  --color-bg-surface: #1e293b;   /* 2) 카드/섹션 표면: 짙은 슬레이트 */
+  --color-accent: #f59e0b;       /* 3) 포인트 컬러: 야경 조명 앰버/골드 */
+  --color-text-main: #f8fafc;    /* 4) 기본 텍스트: 밝은 오프화이트 */
+  --color-text-muted: #cbd5e1;   /* 보조 설명 텍스트 */
+  --color-border: #334155;       /* 경계선 */
+}
+
+/* 2. 기본 초기화 및 글꼴 설정 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+/* 3. 공통 헤더 & 내비게이션 */
+header {
+  background-color: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 24px;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 0 0 14px;
+  color: var(--color-text-muted);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: var(--color-text-main);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+nav a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* 4. 메인 영역 & 섹션 기본 여백 */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+section {
+  margin-bottom: 28px;
+}
+
+h2, h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* 5. 공통 푸터 & 출처 영역 */
+footer {
+  background-color: var(--color-bg-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 20px 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.credit {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
